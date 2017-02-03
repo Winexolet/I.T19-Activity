@@ -1,0 +1,21 @@
+
+body   {
+   
+        background-repeat: no-repeat;
+        background-size:100%; 
+        background-attachment: fixed;
+
+}
+.header {
+    background-color: skyblue;
+
+    padding: 30px 40px;
+    color: black;
+    text-align: center;
+    opacity: 10%;
+}
+
+.foot{
+    font-size: 4px;
+
+}

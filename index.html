@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<Title>Activity</Title>
+<link rel="stylesheet" type="text/css" href="Style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+	<body ng-controller="ctrl">
+			<div>
+			<center>
+				<h1>Sign Up</h1>
+				<div class="header"> 
+				<form>
+					First name: <br>
+					<input type="text" name="firstname" ng-model="fn">
+					<br>Last name: <br>
+					<input type="text" name="lastname" ng-model="ln">
+					<br>Middle name:<br>
+					<input type="text" name="middlename" ng-model="mn">
+					<br>Birthday: <br>
+					<input type="text" name="Birthday" ng-model="bd">
+					<br>Gender: <br>
+					<input type="text" ng-model="gen">
+					<br><input type="button" value="register" ng-click="insert()">
+				</form>
+				<table ng-init="callUser()">
+					<tr>
+						<td>Firstname</td>
+						<td>Lastname</td>
+						<td>Middlename</td>
+						<td>Birthday</td>
+						<td>Gender</td>
+					</tr>
+					<tr ng-repeat="user in users">
+						<td>{{ user.Firstname }}</td>
+						<td>{{ user.Lastname }}</td>
+						<td>{{ user.Middlename }}</td>
+						<td>{{ user.Birthday }}</td>
+						<td>{{ user.Gender }}</td>
+					</tr>
+				</table>
+				<br><br>
+				<form>
+					Username: <br>
+					<input type="text" ng-model="u">
+					<br>Password: <br>
+					<input type="text" ng-model="p">
+					<br>
+					<input type="button" value="login" ng-click="login()">
+				</form>
+				<table ng-init="callData()">
+					<tr>
+						<td>ID</td>
+						<td>Username</td>
+						<td>Password</td>
+					</tr>
+					<tr ng-repeat="person in persons">
+						<td>{{ person.id }}</td>
+						<td>{{ person.user }}</td>
+						<td>{{ person.pass }}</td>
+					</tr>
+				</table>				
+				<br>
+				</center>
+				</div>
+				<br><br><br><br><br><br>
+				<br><br><br><br><br><br>
+				<br><br><br><br><br><br>
+				<br><br><br><br>
+
+			<footer>
+			<center >
+			    <p>@2017-Abao</i>IT 19 Activity </p>
+			  </center>
+			</footer> 
+			<script type="text/javascript" src="js/angular.min.js"></script>
+			<script type="text/javascript" src="js/controller.js"></script>
+			<script type="text/javascript" src="js/jquery.min.js"></script>
+		</center>
+	</body>
+</html>
